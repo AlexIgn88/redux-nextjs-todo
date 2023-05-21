@@ -1,14 +1,9 @@
-import Counter from './Counter';
-import Height from './Height';
-import Width from './Width';
-
+import Form from './Form';
+import Lists from './Lists';
 
 export default function App() {
   return <>
-    <hr />
-    <Counter name='A' />
-    <Counter name='B' />
-    <Height />
-    <Width />
-    <hr /></>;
+    <Form />
+    <Lists />
+  </>
 }

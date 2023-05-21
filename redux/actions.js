@@ -1,20 +1,30 @@
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
+export const ADD_LIST = 'ADD_LIST';
+export const CHECK_LIST = 'CHECK_LIST';
+export const DEL_CHECKED_LISTS = 'DEL_CHECKED_LISTS';
+export const DEL_LIST = 'DEL_LIST';
+export const MOVE_LIST_UP = 'MOVE_LIST_UP';
+export const MOVE_LIST_DOWN = 'MOVE_LIST_DOWN';
 
-export const ADD_HEIGHT  = 'ADD_HEIGHT';
-export const ADD_WIDTH  = 'ADD_WIDTH';
-
-export function increment() {
-  return { type: INCREMENT };
-}
-export function decrement() {
-  return { type: DECREMENT };
+export function addList(text) {
+  return { type: ADD_LIST, text: text };
 }
 
-export function addWidth(delta){
-  return {type: ADD_WIDTH, delta }
+export function checkList(id) {
+  return { type: CHECK_LIST, id: id };
 }
 
-export function addHeight(delta){
-  return {type: ADD_HEIGHT, delta }
+export function delCheckedLists() {
+  return { type: DEL_CHECKED_LISTS };
+}
+
+export function delList(id) {
+  return { type: DEL_LIST, id: id };
+}
+
+export function movelistUp(id) {
+  return { type: MOVE_LIST_UP, id: id };
+}
+
+export function movelistDown(id) {
+  return { type: MOVE_LIST_DOWN, id: id };
 }
