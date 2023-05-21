@@ -9,7 +9,8 @@ export default function Lists() {
         dispatch = useDispatch();
 
     // console.log(lists);
-
+    console.log('рендер Lists', Date.now());
+    
     return <ol className='lists'>
         {lists.map((el, index) => (
             <li

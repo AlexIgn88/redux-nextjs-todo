@@ -7,8 +7,9 @@ export default function Form() {
         [text, setText] = useState(''),
         dispatch = useDispatch();
 
+    console.log('рендер Form', Date.now());
+
     return <div className='form'>
-        <h4>Things to do</h4>
         <input
             type="search"
             value={text}
@@ -17,8 +18,12 @@ export default function Form() {
         <button onClick={() => {
             dispatch(addList(text));
             setText("");
-        }}>Add</button>
+        }}>
+            Add
+        </button>
         <button
-            onClick={() => dispatch(delCheckedLists())}>Delete checked</button>
+            onClick={() => dispatch(delCheckedLists())}>
+            Delete checked
+        </button>
     </div>
 }
