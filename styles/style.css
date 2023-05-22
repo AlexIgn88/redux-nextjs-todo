@@ -1,20 +1,96 @@
+:root {
+    background-image: url("/img/background.jpg");
+}
+
 body {
-    background-color: #9ACD32;
-    font-family: sans-serif;
     display: flex;
     justify-content: center;
+}
+
+.todo,
+.todo input,
+.todo button {
+    font-family: cursive, sans-serif, Arial;
+}
+
+.todo {
     font-size: 24px;
 }
 
-h4 {
+.heading,
+.todo input,
+.todo button {
+    border-radius: 5px;
+}
+
+.heading {
     text-align: center;
-    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    color: azure;
+    background-color: rgba(110, 124, 201, 0.3);
     text-decoration: underline;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+}
+
+.todo input,
+.todo button {
+    font-size: 24px;
+    border: 1px solid black;
+    background-color: rgb(91, 103, 212);
+    color: azure;
+}
+
+.todo input:active,
+.todo button:active {
+    border-color: gray;
+}
+
+.todo input::placeholder {
+    text-overflow: ellipsis;
+    color: #ada3a3;
+    font-size: 24px;
+    font-style: italic;
+    padding-left: 30px;
+}
+
+.todo button:hover {
+    background-color: rgb(73, 83, 172);
+}
+
+.todo li {
+    border: 1px solid rgb(91, 103, 212);
 }
 
 li,
 li span {
     margin: 10px;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+
+}
+
+.todo .label input[type="checkbox"],
+.cross,
+.arrow,
+.todo button,
+.rename {
+    cursor: pointer;
+}
+
+.todo .label input[type="checkbox"] {
+    appearance: none;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #41ad49;
+    border-radius: 100%;
+}
+
+.todo .label input[type="checkbox"]:checked {
+    background-color: #41ad49;
 }
 
 .cross {
@@ -23,4 +99,13 @@ li span {
 
 .arrow {
     color: blue;
+    padding-left: 10px;
+}
+
+li:first-child .up {
+    visibility: hidden;
+}
+
+li:last-child .down {
+    visibility: hidden;
 }

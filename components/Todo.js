@@ -9,9 +9,9 @@ export default function Todo() {
 
   console.log('рендер Todo', Date.now());
 
-  return <>
-    <h4>Things to do</h4>
+  return <div className='todo'>
+    <div className='heading'>Things to do</div>
     <Form />
     {numberOfLists && <Lists />}
-  </>
+  </div>
 }
