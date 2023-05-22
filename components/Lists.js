@@ -14,7 +14,6 @@ export default function Lists() {
         if (evt.keyCode === 13) {
             evt.preventDefault();
             dispatch(renameList(id, text));
-            setText("");
             setRename(false);
         }
     };
@@ -60,11 +59,9 @@ export default function Lists() {
                     />
                     : <span className="rename"
                         onClick={() => {
-                            // dispatch(renameList(el.id))
                             setText(el.str);
                             setRename(el.id);
-                        }
-                        }
+                        }}
                     >
                         &#9997;
                     </span>}
