@@ -50,7 +50,6 @@ export default function Lists() {
                 >
                     &#11167;
                 </span>
-
                 {rename === el.id
                     ? <input
                         type="search"
@@ -69,8 +68,6 @@ export default function Lists() {
                     >
                         &#9997;
                     </span>}
-
-
                 <label className={el.checked ? "label crossed-out" : "label"}>
                     <input type="checkbox"
                         checked={el.checked}
