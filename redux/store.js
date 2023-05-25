@@ -16,11 +16,13 @@ function todoReducer(state = defaultState, action) {
     case CHECK_LIST:
       return Object.assign({}, state, { lists: checkListByID(action.id) });
     case DEL_CHECKED_LISTS:
-      return Object.assign({}, state, { lists: state.lists.filter((item) => !item.checked) });
+      return Object.assign({}, state, { lists: state.lists.filter(item => !item.checked) });
     case DEL_ALL_LISTS:
       return Object.assign({}, state, { lists: [] });
     case DEL_LIST:
-      return Object.assign({}, state, { lists: delListByID(action.id) });
+      return Object.assign({}, state, {
+        lists: state.lists.filter(item => item.id !== action.id)
+      });
     case MOVE_LIST_UP:
       return Object.assign({}, state, { lists: movelistUpByID(action.id) });
     case MOVE_LIST_DOWN:
@@ -44,14 +46,6 @@ function todoReducer(state = defaultState, action) {
     const index = arr.findIndex((item) => id === item.id);
     arr[index].checked = !arr[index].checked;
     return [...arr];
-  }
-
-  function delListByID(id) {
-    let arr = state.lists;
-    const index = arr.findIndex((item) => id === item.id);
-    arr.splice(index, 1);
-    return [...arr];
-    ;
   }
 
   function movelistUpByID(id) {
