@@ -16,6 +16,7 @@ export default function Form() {
     };
 
     console.log('рендер Form', Date.now());
+    console.log('test2');
 
     return <div className='form'>
         <input
