@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { addList, delCheckedLists, delAllLists } from '../redux/actions';
 import { useDispatch } from 'react-redux';
+import { ActionCreators } from 'redux-undo';
 
 export default function Form() {
     const
@@ -36,8 +37,23 @@ export default function Form() {
             Delete checked
         </button>
         <button
-        onClick={() => dispatch(delAllLists())}>
+            onClick={() => dispatch(delAllLists())}>
             Delete all
+        </button>
+        <button
+            onClick={() => dispatch(ActionCreators.undo())}
+        >
+            Undo
+        </button>
+        <button
+            onClick={() => dispatch(ActionCreators.redo())}
+        >
+            Redo
         </button>
     </div>
 }
+
+//store.dispatch(ActionCreators.undo())
+
+// console.log(undoableStore);
+// console.log(ActionCreators);
