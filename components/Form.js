@@ -11,9 +11,11 @@ export default function Form() {
         if (evt.keyCode === 13) {
             evt.preventDefault();
             dispatch(addList(text));
-            setText(""); //если вкл, - дополнительный рендеринг <Form /> при создании листов
+            // setText(""); //если вкл, - дополнительный рендеринг <Form /> при создании листов
         }
     };
+
+    console.log('test');
 
     console.log('рендер Form', Date.now());
 
@@ -27,7 +29,7 @@ export default function Form() {
         />
         <button onClick={() => {
             dispatch(addList(text));
-            setText(""); //если вкл, - дополнительный рендеринг <Form /> при создании листов
+            // setText(""); //если вкл, - дополнительный рендеринг <Form /> при создании листов
         }}>
             Add
         </button>
