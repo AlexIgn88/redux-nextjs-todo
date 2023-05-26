@@ -19,6 +19,9 @@ dependencies:
   redux:
     specifier: ^4.2.1
     version: 4.2.1
+  redux-undo:
+    specifier: ^1.0.1
+    version: 1.0.1
 
 packages:
 
@@ -314,6 +317,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /redux-undo@1.0.1:
+    resolution: {integrity: sha512-0yFPT+FUgwxCEiS0Mg5T1S4tkgjR8h6sJRY9CW4EMsbJOf1SxO289TbJmlzhRouCHacdDF+powPjrjLHoJYxWQ==}
     dev: false
 
   /redux@4.2.1:

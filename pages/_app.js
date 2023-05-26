@@ -3,7 +3,7 @@ import { store } from '../redux/store.js';
 import "../styles/style.css";
 
 export default function MyApp({ Component, pageProps }) {
-  return <Provider store={store}>
+  return <Provider store={store} >
     <Component {...pageProps} />
   </Provider>;
 }
