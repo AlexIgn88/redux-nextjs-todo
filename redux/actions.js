@@ -8,11 +8,11 @@ export const DEL_ALL_LISTS = 'DEL_ALL_LISTS';
 export const RENAME_LIST = 'RENAME_LIST';
 
 export function addList(text) {
-  return { type: ADD_LIST, text: text };
+  return { type: ADD_LIST, text };
 }
 
 export function checkList(id) {
-  return { type: CHECK_LIST, id: id };
+  return { type: CHECK_LIST, id };
 }
 
 export function delCheckedLists() {
@@ -20,15 +20,15 @@ export function delCheckedLists() {
 }
 
 export function delList(id) {
-  return { type: DEL_LIST, id: id };
+  return { type: DEL_LIST, id };
 }
 
 export function movelistUp(id) {
-  return { type: MOVE_LIST_UP, id: id };
+  return { type: MOVE_LIST_UP, id };
 }
 
 export function movelistDown(id) {
-  return { type: MOVE_LIST_DOWN, id: id };
+  return { type: MOVE_LIST_DOWN, id };
 }
 
 export function delAllLists() {
@@ -36,5 +36,5 @@ export function delAllLists() {
 }
 
 export function renameList(id, text) {
-  return { type: RENAME_LIST, id: id, text: text };
+  return { type: RENAME_LIST, id, text };
 }
