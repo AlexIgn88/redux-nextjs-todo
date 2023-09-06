@@ -19,7 +19,7 @@ export default function Lists() {
     };
 
     // console.log(lists);
-    console.log('рендер Lists', Date.now());
+    // console.log('рендер Lists', Date.now());
 
     return <ol className='lists'>
         {lists.map((el, index) => (

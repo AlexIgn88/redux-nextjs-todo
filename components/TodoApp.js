@@ -3,7 +3,7 @@ import Lists from './Lists';
 
 export default function TodoApp() {
 
-  console.log('рендер TodoApp', Date.now());
+  // console.log('рендер TodoApp', Date.now());
 
   return <div className='todo'>
     <div className='heading'>Things to do</div>
